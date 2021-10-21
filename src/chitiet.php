@@ -1,4 +1,4 @@
-<?php include 'header.php' ?>
+<?php include '../src/header.php' ?>
 
 <div class="main-content">
     <div class="container">
@@ -30,10 +30,10 @@
                 $ngaycapnhat1 = $row['modified_on'];
             } else {
                 $_SESSION['no-office-found'] = "<div class='error'>Not Found.</div>";
-                header('location:index.php');
+                header('location: ../src/index.php');
             }
         } else {
-            header('location:index.php');
+            header('location:../src/index.php');
         }
 
         ?>
@@ -170,7 +170,7 @@ if (isset($_POST['submit'])) {
     if ($res2 == true) {
         //Category Updated
         $_SESSION['update'] = "<div class='success'>Updated Successfully.</div>";
-        header('Location: index.php');
+        header('Location: ../src/index.php');
     } else {
         //failed to update category
         echo "Chưa sửa thành công!";
@@ -186,7 +186,7 @@ if (isset($_POST['submit1'])) {
 
     if ($res == true) {
         $_SESSION['delete'] = "<div class='success'>Deleted Successfully.</div>";
-        header('location: index.php');
+        header('location: ../src/index.php');
     } else {
         echo 'Bạn chưa xóa được';
     }
